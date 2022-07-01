@@ -142,21 +142,42 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
+  display: flex;
+  align-items: center;
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
 }
-
+.contact-link:hover .contact-icon,
+.contact-link:focus .contact-icon {
+  fill: var(--accent-color);
+}
+.contact-icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+.contact-mail {
+  width: 16px;
+  height: 12px;
+}
+.contact-smartphone {
+  width: 10px;
+  height: 16px;
+}
 /* герой */
 .hero {
   background-color: var(--secondary-color);
+  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
   text-align: center;
-}
-
-.hero {
   padding: 200px 0;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -194,12 +215,38 @@ img {
   width: 270px;
 }
 
+.benefits-list-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.benefits-icon-1::before {
+  background-image: url(../images/benefits-1.svg);
+}
+
+.benefits-icon-2::before {
+  background-image: url(../images/benefits-2.svg);
+}
+
+.benefits-icon-3::before {
+  background-image: url(../images/benefits-3.svg);
+}
+
+.benefits-icon-4::before {
+  background-image: url(../images/benefits-4.svg);
+}
+
 .benefits-list-item + .benefits-list-item {
   margin-left: 30px;
 }
 
 .benefits-list-item p {
-  margin: 10px 0 0;
+  margin: 10px 0 0 0;
 }
 
 .benefits-title {
@@ -246,7 +293,35 @@ img {
 .team-thumb {
   padding: 30px 0;
 }
+.team-thumb .list {
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  margin-top: 16px;
+}
 
+.team-thumb-item + .team-thumb-item {
+  margin-left: 10px;
+}
+.team-thumb-link {
+  display: inline-block;
+  padding: 12px 12px;
+  border-radius: 50%;
+}
+.team-thumb-link:hover,
+.team-thumb-link:focus {
+  background-color: var(--accent-color);
+}
+.team-thumb-link:hover .team-thumb-icon,
+.team-thumb-link:focus .team-thumb-icon {
+  fill: var(--primary-color);
+}
+.team-thumb-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
 .team-title {
   font-weight: 500;
   font-size: 16px;
@@ -259,6 +334,37 @@ img {
   line-height: 1.9;
   text-align: center;
   margin: 10px 0 0 0;
+}
+/* клиенты */
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.clients-link {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px; */
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: block;
+  padding: 16px 32px;
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* портфолио */
@@ -312,6 +418,12 @@ img {
   margin-bottom: 0;
 }
 
+.portfolio-link:hover {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-thumb {
   border: 1px solid #ececec;
   padding: 20px 24px;
@@ -360,4 +472,48 @@ img {
 .address:hover,
 .address:focus {
   color: var(--accent-color);
+}
+
+.footer .container {
+  display: flex;
+}
+.adress-wrap {
+  margin-right: 70px;
+}
+.social-wrap .list {
+  display: flex;
+}
+.footer-social-text {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin: 12px 0 20px 0;
+}
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
+}
+.footer-social-link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icon-instagram {
+  background-image: url(../images/instagram.svg);
+}
+.social-icon-twitter {
+  background-image: url(../images/twitter.svg);
+}
+.social-icon-facebook {
+  background-image: url(../images/facebook.svg);
+}
+.social-icon-linkedin {
+  background-image: url(../images/linkedin.svg);
 }
